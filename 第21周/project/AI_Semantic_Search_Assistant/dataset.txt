@@ -1,0 +1,56 @@
+Machine learning is a field of artificial intelligence that focuses on building systems that learn from data.
+Natural language processing helps computers understand and generate human language.
+Semantic search uses embeddings to capture the meaning of text rather than simple keyword matching.
+Cosine similarity measures the angle between two vectors and is useful for comparing text embeddings.
+Euclidean distance measures straight-line distance and can rank texts by geometric closeness.
+TF-IDF is a statistical method that evaluates the importance of words in a document relative to a corpus.
+Vector databases store embeddings so that similarity search can be performed efficiently.
+Prompt injection is a manipulation technique where malicious instructions override a model's intended behavior.
+A prompt filter can reduce the risk of unsafe or adversarial user inputs.
+Embedding-based retrieval often performs better than keyword search for conceptual queries.
+Deep learning models use layers of neurons to learn complex patterns in data.
+Recommender systems suggest items that users may like based on past behavior.
+Image classification assigns labels to images using learned visual features.
+Speech recognition converts spoken language into text using acoustic models.
+Computer vision enables machines to interpret and analyze visual information.
+Robotics combines sensing, planning, and control to interact with the physical world.
+Knowledge graphs organize relationships between entities for structured reasoning.
+Anomaly detection finds unusual patterns that differ from normal behavior.
+Clustering groups similar data points without predefined labels.
+Regression predicts continuous values based on relationships in data.
+Classification predicts discrete labels from input features.
+Neural networks are composed of interconnected nodes that learn representations.
+Transformers are a type of architecture that uses attention to model long-range dependencies.
+BERT is a transformer-based language model that is widely used for understanding text.
+GPT models generate coherent text by predicting the next token in a sequence.
+Information retrieval aims to find relevant documents from a large collection.
+Search engines index documents so that users can quickly retrieve relevant content.
+Ranking algorithms order candidate results by relevance and usefulness.
+Evaluation metrics such as precision and recall measure retrieval effectiveness.
+Query expansion adds related terms to improve search recall.
+Document summarization creates concise descriptions of long texts.
+Named entity recognition identifies persons, organizations, and locations in text.
+Sentiment analysis estimates the emotional tone expressed in a piece of text.
+Topic modeling discovers latent themes in a document collection.
+Reinforcement learning trains agents through trial and error with rewards.
+Transfer learning adapts knowledge from one domain to another to reduce training cost.
+Data augmentation creates additional training examples to improve generalization.
+Feature engineering transforms raw data into useful input variables for models.
+Model interpretability helps users understand why a model made a prediction.
+Fairness studies whether a model treats different groups equitably.
+Privacy-preserving machine learning limits exposure of sensitive personal data.
+Edge AI deploys models on local devices with limited computational resources.
+MLOps practices improve the lifecycle of machine learning systems in production.
+Active learning selects the most informative examples for annotation.
+Federated learning trains models across distributed devices without sharing raw data.
+Graph neural networks model relationships in graph-structured data.
+Self-supervised learning learns representations from unlabeled data.
+Few-shot learning aims to generalize from only a small number of examples.
+Large language models can answer questions, summarize text, and write code.
+Retrieval-augmented generation combines search and generation for more grounded responses.
+The internet contains huge amounts of text, images, and multimedia content.
+Search relevance depends on both lexical overlap and semantic understanding.
+Embeddings map words or documents into dense vectors that capture meaning.
+Text similarity can be measured by cosine similarity or euclidean distance.
+A good search system should balance precision, recall, and latency.
+The system should also be robust to adversarial prompts and unexpected user input.
