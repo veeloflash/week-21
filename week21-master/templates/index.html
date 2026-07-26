@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Week21_AI_Semantic_Search_Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Week 21 AI Semantic Search Assistant</h1>
+      <p class="muted">This application demonstrates TF-IDF search, vector similarity, embedding-style retrieval, and a simple gradient descent demo for an educational AI search workflow.</p>
+
+      <form id="search-form" method="post">
+        <div class="controls">
+          <label for="query">Query</label>
+          <input id="query" name="query" size="60"
+                 placeholder="Try: machine learning, bank, semantic search, neural networks"
+                 value="{{ request.form.get('query', '') }}" />
+
+          <label for="algorithm">Algorithm</label>
+          <select id="algorithm" name="algorithm">
+            <option value="cosine" {% if selected_algorithm == 'cosine' %}selected{% endif %}>Cosine</option>
+            <option value="tfidf" {% if selected_algorithm == 'tfidf' %}selected{% endif %}>TF-IDF</option>
+            <option value="embedding" {% if selected_algorithm == 'embedding' %}selected{% endif %}>Embedding</option>
+          </select>
+
+          <button type="submit">Run comparison</button>
+        </div>
+        <p id="algorithm-hint" class="muted">Choose an algorithm to see the matching explanation.</p>
+      </form>
+
+      {% if error %}
+      <div class="card"><strong>Error:</strong> {{ error }}</div>
+      {% endif %}
+
+      <div class="grid">
+
+        <div class="card">
+          <h2>Cosine Similarity</h2>
+          <p class="pill">
+            Score:
+            {% if cosine_result is not none %}
+              {{ "%.4f"|format(cosine_result) }}
+            {% else %}—{% endif %}
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Euclidean Distance</h2>
+          <p class="pill">
+            {% if euclidean_results %}
+              {{ "%.4f"|format(euclidean_results[0][1]) }}
+            {% else %}—{% endif %}
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>TF-IDF Results</h2>
+          {% if tfidf_results %}
+            <ol class="result-list">
+              {% for item in tfidf_results %}
+                <li>{{ item[0] }} — score {{ "%.4f"|format(item[1]) }}</li>
+              {% endfor %}
+            </ol>
+          {% else %}
+            <p class="muted">No results available for the current query.</p>
+          {% endif %}
+        </div>
+
+        <div class="card">
+          <h2>Vector Search Results (Cosine)</h2>
+          {% if vector_results %}
+            <ol class="result-list">
+              {% for item in vector_results %}
+                <li>{{ item[0] }} — score {{ "%.4f"|format(item[1]) }}</li>
+              {% endfor %}
+            </ol>
+          {% endif %}
+        </div>
+
+        <div class="card">
+          <h2>Vector Search Results (Euclidean)</h2>
+          {% if euclidean_results %}
+            <ol class="result-list">
+              {% for item in euclidean_results %}
+                <li>{{ item[0] }} — distance {{ "%.4f"|format(item[1]) }}</li>
+              {% endfor %}
+            </ol>
+          {% endif %}
+        </div>
+
+        <div class="card">
+          <h2>Embedding Search Results</h2>
+          {% if embedding_results %}
+            <ol class="result-list">
+              {% for item in embedding_results %}
+                <li>{{ item[0] }} — score {{ "%.4f"|format(item[1]) }}</li>
+              {% endfor %}
+            </ol>
+          {% endif %}
+        </div>
+
+        <div class="card">
+          <h2>Embedding Similarity Matrix</h2>
+          <pre>{{ embedding_matrix }}</pre>
+        </div>
+
+        <div class="card">
+          <h2>Gradient Descent Summary</h2>
+          <p>Learning rate: {{ gradient_summary["learning_rate"] }} | Epochs: {{ gradient_summary["epochs"] }}</p>
+          <p>Final parameters:
+            w={{ "%.4f"|format(gradient_summary["final_parameters"]["w"]) }},
+            b={{ "%.4f"|format(gradient_summary["final_parameters"]["b"]) }}
+          </p>
+          <pre>{{ gradient_summary["losses"] }}</pre>
+        </div>
+
+        <div class="card">
+          <h2>Embedding Failure Analysis</h2>
+          <ul>
+            {% for case in failure_cases %}
+            <li>{{ case }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>

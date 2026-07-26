@@ -1,0 +1,61 @@
+machine learning is a field of artificial intelligence
+supervised learning uses labeled examples for training
+unsupervised learning discovers patterns in unlabeled data
+deep learning uses neural networks to model complex relationships
+transformers changed natural language processing by improving sequence modeling
+sentence embeddings capture semantic meaning in dense vectors
+vector search finds documents that are similar in representation space
+information retrieval focuses on finding relevant documents for a query
+ranking systems sort candidates by relevance and usefulness
+semantic search uses meaning rather than exact lexical overlap
+keyword search is effective when terms match directly
+tf idf measures term importance across a corpus
+cosine similarity compares vectors by angle rather than magnitude
+euclidean distance compares vectors by geometric distance
+gradient descent updates model parameters to reduce loss
+neural networks process information through layers of neurons
+attention mechanisms allow models to focus on important tokens
+large language models generate text by predicting the next token
+retrieval augmented generation combines search with generation
+prompt engineering improves model responses with better instructions
+fine tuning adapts a pretrained model to a specific task
+embedding models convert text into dense numerical representations
+sparse vectors store mostly zeros with explicit nonzero entries
+dense vectors store values across many dimensions
+recommender systems suggest items based on user preferences
+chatbots answer questions using language understanding and context
+search engines index documents so they can be retrieved quickly
+classification assigns inputs to known categories
+clustering groups similar examples without labels
+regression predicts numeric values from input features
+feature engineering improves model inputs before training
+evaluation metrics include precision recall and accuracy
+overfitting happens when a model memorizes training data
+underfitting happens when a model is too simple for the task
+regularization reduces model complexity to improve generalization
+cross validation estimates how a model will perform on unseen data
+natural language understanding interprets user intent from text
+named entity recognition identifies people places and organizations
+sentiment analysis detects positive or negative opinions
+question answering retrieves or generates an answer to a question
+document ranking orders evidence by relevance to a query
+semantic similarity measures conceptual closeness between texts
+language modeling predicts likely words in context
+tokenization splits text into smaller units for processing
+normalization standardizes text before analysis
+stemming reduces words to their base forms
+lemmatization maps words to dictionary forms
+indexing organizes data so retrieval is efficient
+sparse retrieval uses inverted indices for fast lookup
+dense retrieval uses embeddings for semantic matching
+hybrid retrieval combines keyword and semantic methods
+knowledge graphs represent entities and their relationships
+memory modules help systems retain important context
+dialogue systems manage multi turn conversations
+safety filters reduce harmful or manipulative outputs
+benchmarking compares systems on standard tasks
+evaluation datasets provide ground truth for testing
+confidence scores estimate how certain a prediction is
+explainability helps users understand model decisions
+model compression reduces size and inference cost
+distributed training trains models across multiple devices
