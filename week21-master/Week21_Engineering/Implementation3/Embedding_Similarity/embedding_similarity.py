@@ -1,22 +1,13 @@
 import numpy as np
-
-from Week21_Engineering.shared.shared import encode_texts, load_documents
-
-texts = load_documents()
-emb = encode_texts(texts)
-
-
-def embedding_similarity_matrix():
-    matrix = []
-    for i in range(len(texts)):
-        row = []
-        for j in range(len(texts)):
-            denom = np.linalg.norm(emb[i]) * np.linalg.norm(emb[j])
-            sim = 0.0 if denom == 0 else float(np.dot(emb[i], emb[j]) / denom)
-            row.append(sim)
-        matrix.append(row)
-    return matrix
-
+from Week21_Engineering.shared.shared import documents, document_vectors
 
 def cosine():
-    return embedding_similarity_matrix()
+    n = len(documents)
+    m = np.zeros((n, n))
+    for i in range(n):
+        for j in range(n):
+            a = document_vectors[i]
+            b = document_vectors[j]
+            denom = np.linalg.norm(a) * np.linalg.norm(b)
+            m[i][j] = 0.0 if denom == 0 else float(np.dot(a, b) / denom)
+    return m

@@ -103,5 +103,5 @@ The current implementation uses a deterministic fallback embedding strategy when
 Added a strong pronpt filtering including, hidden symbels, random symbels and promopt ignoring, also a comparation of the system before filtering and system after filtering.  
 The result increase from 50% to 100%
 
-## Learn more
-there are also information in project reflection.md, dataset.txt, example.png(3 of them) for see what is the result and requirement.txt.
+## Testing Result
+There is 5 pictures showing the result, named example 1, 2, 3, 4 and 5

@@ -1,5 +1,17 @@
-from Week21_Engineering.shared.shared import cosine_similarity as shared_cosine_similarity
+import numpy as np
+from Week21_Engineering.shared.shared import encode_texts
 
+def cosine_similarity(a, b):
+    if isinstance(a, str):
+        a = encode_texts(a)[0]
+    if isinstance(b, str):
+        b = encode_texts(b)[0]
+    denom = np.linalg.norm(a) * np.linalg.norm(b)
+    return 0.0 if denom == 0 else float(np.dot(a, b) / denom)
 
-def cosine_similarity(text1, text2):
-    return shared_cosine_similarity(text1, text2)
+def euclidean_distance(a, b):
+    if isinstance(a, str):
+        a = encode_texts(a)[0]
+    if isinstance(b, str):
+        b = encode_texts(b)[0]
+    return float(np.linalg.norm(a - b))
