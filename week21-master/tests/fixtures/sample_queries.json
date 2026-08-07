@@ -1,7 +1,0 @@
-[
-  {"query": "machine learning", "expected_min": 3},
-  {"query": "deep neural networks", "expected_min": 3},
-  {"query": "semantic search", "expected_min": 3},
-  {"query": "bank", "expected_min": 3},
-  {"query": "retrieval augmented generation", "expected_min": 3}
-]
