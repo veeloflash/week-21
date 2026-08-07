@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Week21 Search Engine</title>
+</head>
+<body>
+
+<h1>Week21 Search Engine</h1>
+
+<form method="POST">
+    <input type="text" name="query" placeholder="Enter query" style="width:300px;">
+    <button type="submit">Search</button>
+</form>
+
+{% if error %}
+<p style="color:red;">{{ error }}</p>
+{% endif %}
+
+<h2>Cosine Top‑5</h2>
+{% for text, score in cosine_results %}
+<p>{{ text }} — {{ score }}</p>
+{% endfor %}
+
+<h2>Euclidean Top‑5</h2>
+{% for text, score in euclidean_results %}
+<p>{{ text }} — {{ score }}</p>
+{% endfor %}
+
+<h2>TF‑IDF Top‑5</h2>
+{% for text, score in tfidf_results %}
+<p>{{ text }} — {{ score }}</p>
+{% endfor %}
+
+<h2>Embedding Dot‑Product Top‑5</h2>
+{% for text, score in embedding_results %}
+<p>{{ text }} — {{ score }}</p>
+{% endfor %}
+
+<h2>Failure Analysis</h2>
+{% for item in failure_cases %}
+<p><b>{{ item.summary }}</b></p>
+<p>Query: {{ item.query }}</p>
+<p>Expected: {{ item.expected_document }}</p>
+
+<p>Ranking:</p>
+<ul>
+  <li>Embedding: {{ item.analysis.embedding_rank }}</li>
+  <li>Cosine: {{ item.analysis.cosine_rank }}</li>
+  <li>Euclidean: {{ item.analysis.euclidean_rank }}</li>
+  <li>TF‑IDF: {{ item.analysis.tfidf_rank }}</li>
+</ul>
+
+<p>Reason: {{ item.likely_reason }}</p>
+<p>Recommendation: {{ item.recommendation }}</p>
+<hr>
+{% endfor %}
+
+</body>
+</html>
