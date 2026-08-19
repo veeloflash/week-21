@@ -1,0 +1,3 @@
+# Gradient descent report
+
+The engineering experiment contains three fixed learning-rate runs: too large (`1.0`, unstable), normal (`0.01`, converges), and too small (`0.00001`, converges slowly). Each run uses 200 epochs on `y = 2x + 1`, records a loss curve, and reports final `w` and `b`. The implementation remains in `Week21_Engineering/Implementation6/Gradient_Descent/gradient_descent_demo.py`; it is intentionally not a product search feature.

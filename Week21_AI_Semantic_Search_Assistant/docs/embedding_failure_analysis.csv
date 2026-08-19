@@ -1,0 +1,21 @@
+query,category,cause,improvement,before,after
+bank,ambiguity,corpus lacks financial meaning,add domain labels,fail,reviewed
+weather,out of domain,no relevant corpus record,abstention and fallback,fail,reviewed
+GAN acronym,rare term,short token collision,expand metadata,fail,reviewed
+not neural networks,negation,bag of tokens ignores negation,negation-aware reranker,fail,reviewed
+AI and cooking,mixed topic,competing intents,query segmentation,fail,reviewed
+model size,polysemy,model has several concepts,domain classifier,fail,reviewed
+learning rate too small,partial overlap,generic learning wins,phrase features,fail,reviewed
+image labels,related concept,vision and labels overlap,metadata filters,fail,reviewed
+translate code,missing topic,no code translation record,expand corpus,fail,reviewed
+secure prompt,missing topic,security vocabulary absent,add security records,fail,reviewed
+data pipeline,coverage gap,introductory corpus,add pipeline examples,fail,reviewed
+large language model,coverage gap,LLM phrase absent,add modern terminology,fail,reviewed
+bank transfer,ambiguity,bank sense unresolved,entity filter,fail,reviewed
+loss curve,coverage gap,curve absent,add experiment metadata,fail,reviewed
+attention heads,coverage gap,transformer detail absent,expand NLP corpus,fail,reviewed
+fairness,coverage gap,bias examples absent,add responsible AI labels,fail,reviewed
+SQL retrieval,coverage gap,SQL absent,domain expansion,fail,reviewed
+audio model,coverage gap,audio absent,multimodal corpus,fail,reviewed
+privacy attack,coverage gap,privacy absent,security corpus,fail,reviewed
+deployment latency,coverage gap,operations absent,add production records,fail,reviewed

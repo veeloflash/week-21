@@ -1,0 +1,3 @@
+# Model analysis report
+
+TF-IDF rewards exact term overlap and is easy to audit. The product embedding baseline uses deterministic token hashing so evaluation is reproducible without a network model download. Cosine compares direction and is less sensitive to document length; Euclidean compares absolute distance and can change the ranking. A production upgrade should compare a versioned pretrained encoder and reranker on a larger labelled corpus.

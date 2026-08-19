@@ -1,0 +1,3 @@
+# Security analysis report
+
+The boundary normalizes Unicode, removes zero-width obfuscation, checks direct and indirect injection patterns, detects jailbreak wording, decodes valid Base64 probes, separates filtering from output checking, and logs blocked categories. It is a baseline control, not a complete LLM security system: retrieval poisoning, novel encodings, and model-level policy failures need additional controls.

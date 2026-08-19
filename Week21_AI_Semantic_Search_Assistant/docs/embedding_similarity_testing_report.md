@@ -1,0 +1,3 @@
+# Embedding similarity testing report
+
+Required = 30 text groups. Actual = 30 groups: the 20 product queries plus 10 paired paraphrase probes. Success cases include `machine learning / field of artificial intelligence`, `deep neural networks / multiple computation layers`, `interpret images / computer vision`, `gradient descent / parameter updates`, and `precision / relevance of predictions`. Failure cases include ambiguous `bank`, out-of-domain `weather`, negation, rare acronym `GAN`, and long mixed-topic text.

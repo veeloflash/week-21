@@ -1,0 +1,21 @@
+Query,Expected,TF-IDF,Embedding,Cosine,Euclidean,Pass-Fail,Notes
+machine learning,doc_002,doc_002,doc_002,0.82,1.41,Pass,exact topic
+deep neural networks,doc_005,doc_005,doc_005,0.87,1.00,Pass,exact topic
+semantic search,doc_043,doc_043,doc_043,0.76,1.41,Pass,ranking task
+supervised labels,doc_003;doc_024,doc_003,doc_003,0.71,1.73,Pass,ground truth hit
+unlabeled patterns,doc_004,doc_004,doc_004,0.82,1.41,Pass,exact topic
+reinforcement rewards,doc_006,doc_006,doc_006,0.82,1.41,Pass,exact topic
+understand text,doc_007,doc_007,doc_007,0.71,1.73,Pass,NLP
+interpret images,doc_008,doc_008,doc_008,0.82,1.41,Pass,vision
+transformer NLP,doc_009,doc_009,doc_009,0.82,1.41,Pass,exact topic
+classify documents,doc_010,doc_010,doc_010,0.82,1.41,Pass,exact topic
+robot systems,doc_011,doc_011,doc_011,0.71,1.73,Pass,exact topic
+statistics computation,doc_012,doc_012,doc_012,0.82,1.41,Pass,exact topic
+gradient optimization,doc_014;doc_015,doc_015,doc_015,0.67,1.73,Pass,ground truth hit
+model loss,doc_014,doc_014,doc_014,0.71,1.73,Pass,exact topic
+classification labels,doc_017;doc_024,doc_017,doc_017,0.71,1.73,Pass,ground truth hit
+continuous values,doc_018,doc_018,doc_018,0.82,1.41,Pass,exact topic
+similar data groups,doc_019,doc_019,doc_019,0.82,1.41,Pass,exact topic
+model performance,doc_025,doc_025,doc_025,0.71,1.73,Pass,exact topic
+prediction precision,doc_027,doc_027,doc_027,0.82,1.41,Pass,exact topic
+search result relevance,doc_043,doc_043,doc_043,0.82,1.41,Pass,exact topic

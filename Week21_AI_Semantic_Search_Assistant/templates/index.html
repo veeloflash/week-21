@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week21 AI Semantic Search Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+</head>
+<body>
+<main class="container">
+    <header class="hero">
+        <p class="eyebrow">WEEK 21 / RETRIEVAL LAB</p>
+        <h1>AI Semantic Search Assistant</h1>
+        <p class="muted">Compare lexical relevance with embedding geometry on the same corpus.</p>
+    </header>
+    <form method="POST" class="controls" id="search-form">
+        <label for="query">Search query</label>
+        <input id="query" name="query" maxlength="300" placeholder="e.g. how do neural networks learn?" required>
+        <button type="submit">Search</button>
+    </form>
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    {% if tfidf_results or cosine_results or euclidean_results %}
+    <section class="comparison" aria-label="Ranking comparison">
+        <article class="result-panel"><h2>TF-IDF Results</h2><p class="muted">Term-weighted, higher score wins.</p><ol>{% for text, score in tfidf_results %}<li><span>{{ text }}</span><strong>{{ "%.3f"|format(score) }}</strong></li>{% endfor %}</ol></article>
+        <article class="result-panel"><h2>Embedding + Cosine</h2><p class="muted">Direction similarity, higher score wins.</p><ol>{% for text, score in cosine_results %}<li><span>{{ text }}</span><strong>{{ "%.3f"|format(score) }}</strong></li>{% endfor %}</ol></article>
+        <article class="result-panel"><h2>Embedding + Euclidean</h2><p class="muted">Distance similarity, lower score wins.</p><ol>{% for text, score in euclidean_results %}<li><span>{{ text }}</span><strong>{{ "%.3f"|format(score) }}</strong></li>{% endfor %}</ol></article>
+    </section>
+    {% else %}<p class="empty">Enter a query to inspect three Top-5 rankings.</p>{% endif %}
+</main>
+</body>
+</html>
